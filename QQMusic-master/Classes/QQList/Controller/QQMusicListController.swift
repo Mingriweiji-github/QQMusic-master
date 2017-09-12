@@ -46,6 +46,9 @@ class QQMusicListController: UITableViewController {
         cell.animation(AnimationType.scale)
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
 
 }

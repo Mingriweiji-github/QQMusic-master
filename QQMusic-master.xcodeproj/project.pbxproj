@@ -62,6 +62,10 @@
 		C701FF221F66925F008C2AF3 /* QQLrcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF211F66925F008C2AF3 /* QQLrcModel.swift */; };
 		C701FF241F6695B6008C2AF3 /* QQTimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF231F6695B6008C2AF3 /* QQTimeTool.swift */; };
 		C701FF261F678A7F008C2AF3 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = C701FF251F678A7F008C2AF3 /* Musics.plist */; };
+		C701FF281F67B5D8008C2AF3 /* QQMusicOperationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF271F67B5D8008C2AF3 /* QQMusicOperationTool.swift */; };
+		C701FF2A1F67B60B008C2AF3 /* QQMusicTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF291F67B60B008C2AF3 /* QQMusicTool.swift */; };
+		C701FF2D1F67C1D7008C2AF3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF2C1F67C1D7008C2AF3 /* CALayer+Extension.swift */; };
+		C701FF2F1F67C416008C2AF3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF2E1F67C416008C2AF3 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +147,10 @@
 		C701FF211F66925F008C2AF3 /* QQLrcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQLrcModel.swift; sourceTree = "<group>"; };
 		C701FF231F6695B6008C2AF3 /* QQTimeTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQTimeTool.swift; sourceTree = "<group>"; };
 		C701FF251F678A7F008C2AF3 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
+		C701FF271F67B5D8008C2AF3 /* QQMusicOperationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQMusicOperationTool.swift; sourceTree = "<group>"; };
+		C701FF291F67B60B008C2AF3 /* QQMusicTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQMusicTool.swift; sourceTree = "<group>"; };
+		C701FF2C1F67C1D7008C2AF3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		C701FF2E1F67C416008C2AF3 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,10 +391,22 @@
 		C701FF1C1F668EC0008C2AF3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C701FF2B1F67C1C0008C2AF3 /* Category */,
 				C701FF1D1F668EE5008C2AF3 /* QQMusicDataManager.swift */,
 				C701FF231F6695B6008C2AF3 /* QQTimeTool.swift */,
+				C701FF291F67B60B008C2AF3 /* QQMusicTool.swift */,
+				C701FF271F67B5D8008C2AF3 /* QQMusicOperationTool.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		C701FF2B1F67C1C0008C2AF3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C701FF2E1F67C416008C2AF3 /* UIView+Extension.swift */,
+				C701FF2C1F67C1D7008C2AF3 /* CALayer+Extension.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,13 +589,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C701FF2F1F67C416008C2AF3 /* UIView+Extension.swift in Sources */,
 				C701FEC21F66717F008C2AF3 /* QQMusicModel.swift in Sources */,
 				C701FEC01F6670B7008C2AF3 /* QQMusicListController.swift in Sources */,
 				C701FF241F6695B6008C2AF3 /* QQTimeTool.swift in Sources */,
+				C701FF2D1F67C1D7008C2AF3 /* CALayer+Extension.swift in Sources */,
+				C701FF2A1F67B60B008C2AF3 /* QQMusicTool.swift in Sources */,
 				C701FEBD1F667096008C2AF3 /* AppDelegate.swift in Sources */,
 				C701FF221F66925F008C2AF3 /* QQLrcModel.swift in Sources */,
 				C701FF1E1F668EE5008C2AF3 /* QQMusicDataManager.swift in Sources */,
 				C701FEC51F6676DF008C2AF3 /* QQMusicCell.swift in Sources */,
+				C701FF281F67B5D8008C2AF3 /* QQMusicOperationTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
