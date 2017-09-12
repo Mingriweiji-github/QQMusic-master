@@ -20,8 +20,8 @@ class QQMusicCell: UITableViewCell {
     @IBOutlet weak var songNameLabel: UILabel!
     var musicModel: QQMusicModel? {
         didSet{
-            if ((musicModel?.singerImage!) != nil) {
-                headerImageV.image = UIImage(named: (musicModel?.singerImage)!)
+            if ((musicModel?.singerIcon) != nil) {
+                headerImageV.image = UIImage(named: (musicModel?.singerIcon)!)
             }
             singerNameLabel.text = musicModel?.singer
             songNameLabel.text = musicModel?.name

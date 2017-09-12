@@ -19,12 +19,20 @@ class QQMusicListController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
+        //Model
+        
+        QQMusicDataManager.getMusics { (musicModels:[QQMusicModel]) in
+            self.models = musicModels
+            self.tableView.reloadData()
+        }
     }
 
     func setupUI(){
         tableView.rowHeight = 60
         tableView.backgroundView = UIImageView(image: UIImage(named: "QQListBack.jpg"))
         tableView.separatorStyle = .none
+        let nib = UINib(nibName: String(describing:QQMusicCell.self), bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "musicCellID")
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,7 +42,7 @@ class QQMusicListController: UITableViewController {
         let cellID = "musicCellID"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! QQMusicCell
         cell.musicModel = models[indexPath.row]
-        //关键帧缩放动画
+        //设置关键帧缩放动画
         cell.animation(AnimationType.scale)
         return cell
     }

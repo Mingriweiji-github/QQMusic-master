@@ -59,9 +59,9 @@
 		C701FF1A1F668B39008C2AF3 /* 339744.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C701FEF11F668B39008C2AF3 /* 339744.mp3 */; };
 		C701FF1B1F668B39008C2AF3 /* QQListBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C701FEF21F668B39008C2AF3 /* QQListBack.jpg */; };
 		C701FF1E1F668EE5008C2AF3 /* QQMusicDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF1D1F668EE5008C2AF3 /* QQMusicDataManager.swift */; };
-		C701FF201F668F3F008C2AF3 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = C701FF1F1F668F3F008C2AF3 /* Musics.plist */; };
 		C701FF221F66925F008C2AF3 /* QQLrcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF211F66925F008C2AF3 /* QQLrcModel.swift */; };
 		C701FF241F6695B6008C2AF3 /* QQTimeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF231F6695B6008C2AF3 /* QQTimeTool.swift */; };
+		C701FF261F678A7F008C2AF3 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = C701FF251F678A7F008C2AF3 /* Musics.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,9 +140,9 @@
 		C701FEF11F668B39008C2AF3 /* 339744.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 339744.mp3; sourceTree = "<group>"; };
 		C701FEF21F668B39008C2AF3 /* QQListBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = QQListBack.jpg; sourceTree = "<group>"; };
 		C701FF1D1F668EE5008C2AF3 /* QQMusicDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQMusicDataManager.swift; sourceTree = "<group>"; };
-		C701FF1F1F668F3F008C2AF3 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
 		C701FF211F66925F008C2AF3 /* QQLrcModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQLrcModel.swift; sourceTree = "<group>"; };
 		C701FF231F6695B6008C2AF3 /* QQTimeTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQTimeTool.swift; sourceTree = "<group>"; };
+		C701FF251F678A7F008C2AF3 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,14 +230,14 @@
 		C701FEAB1F666D27008C2AF3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C701FF1F1F668F3F008C2AF3 /* Musics.plist */,
+				C701FF251F678A7F008C2AF3 /* Musics.plist */,
+				C701FE861F666B4B008C2AF3 /* Info.plist */,
 				C701FEC71F668B39008C2AF3 /* Images */,
 				C701FEDC1F668B39008C2AF3 /* Lrcs */,
 				C701FEE71F668B39008C2AF3 /* MP3s */,
 				C701FEF21F668B39008C2AF3 /* QQListBack.jpg */,
 				C701FEAD1F666D27008C2AF3 /* Main.storyboard */,
 				C701FE811F666B4B008C2AF3 /* Assets.xcassets */,
-				C701FE861F666B4B008C2AF3 /* Info.plist */,
 				C701FEAC1F666D27008C2AF3 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -511,7 +511,7 @@
 				C701FF121F668B39008C2AF3 /* 10736444.mp3 in Resources */,
 				C701FF181F668B39008C2AF3 /* 255319.mp3 in Resources */,
 				C701FEFE1F668B39008C2AF3 /* kzxd_icon@2x.jpg in Resources */,
-				C701FF201F668F3F008C2AF3 /* Musics.plist in Resources */,
+				C701FF261F678A7F008C2AF3 /* Musics.plist in Resources */,
 				C701FF171F668B39008C2AF3 /* 235319.mp3 in Resources */,
 				C701FEFD1F668B39008C2AF3 /* kzxd@2x.jpg in Resources */,
 				C701FF031F668B39008C2AF3 /* wf@2x.jpg in Resources */,

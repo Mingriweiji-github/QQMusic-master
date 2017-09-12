@@ -11,10 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="QQMusicCell" customModule="QQMusic_master" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCellID" rowHeight="63" id="KGk-i7-Jjw" customClass="QQMusicCell" customModule="QQMusic_master" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="337" height="63"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="337" height="62.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -51,6 +51,7 @@
                     <constraint firstItem="C0M-8x-sv2" firstAttribute="bottom" secondItem="JKn-Sw-CZe" secondAttribute="bottom" id="zsi-mC-K2Z"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="headerImageV" destination="JKn-Sw-CZe" id="r4q-ZI-tsH"/>
                 <outlet property="singerNameLabel" destination="C0M-8x-sv2" id="Nab-m4-hC7"/>

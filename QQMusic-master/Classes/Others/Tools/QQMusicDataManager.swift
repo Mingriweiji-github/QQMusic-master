@@ -10,19 +10,23 @@ import UIKit
 
 class QQMusicDataManager: NSObject {
     class func getMusics(_ result: ([QQMusicModel])-> ()){
-        guard let path = Bundle.main.path(forResource: "Musics", ofType: "plist") else {
+        guard let path = Bundle.main.path(forResource: "Musics.plist", ofType: nil) else {
             result([QQMusicModel]())
-            return }
+            return
+        }
         
         
         guard let array = NSArray(contentsOfFile: path) else {
             result([QQMusicModel]())
-            return  }
+            return
+        }
         
         var musics = [QQMusicModel]()
         for dict in array {
-            let music = QQMusicModel(dict:dict as! [String:Any])
-            musics.append(music)
+            //转model
+            let musicM = QQMusicModel(dict:dict as! [String:Any])
+            //model数组拼接
+            musics.append(musicM)
         }
         
         result(musics)
