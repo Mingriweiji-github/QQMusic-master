@@ -12,7 +12,7 @@ class QQMusicOperationTool: NSObject {
     //单例
     static let sharedInstance = QQMusicOperationTool()
     let tool = QQMusicTool()
-    var musicMs = [QQMusicModel]()
+    var musicMs:[QQMusicModel] = [QQMusicModel]()
     
     fileprivate var currentPlayIndex = -1{
         didSet{
@@ -24,8 +24,21 @@ class QQMusicOperationTool: NSObject {
             }
         }
     }
+    
+    fileprivate var musicMessageM = QQMusicMessageModel()
+    func getMusicMessageM()-> QQMusicMessageModel{
+    
+        musicMessageM.musicM = musicMs[currentPlayIndex]
+        musicMessageM.costTime = tool.player?.currentTime ?? 0
+        musicMessageM.totalTime = tool.player?.duration ?? 0
+        musicMessageM.isPlaying = tool.player?.isPlaying ?? false
+        return musicMessageM
+    }
+    
     func playMusic(_ musicM:QQMusicModel){
-        
+        guard musicM.filename != nil else {
+            return
+        }
         tool.playMusic(musicM.filename!)
         currentPlayIndex = musicMs.index(of: musicM)!
     }

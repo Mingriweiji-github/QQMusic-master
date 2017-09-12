@@ -9,7 +9,7 @@
 import UIKit
 
 class QQMusicListController: UITableViewController {
-    var models = [QQMusicModel](){
+    var models:[QQMusicModel] = [QQMusicModel](){
         didSet{
             tableView.reloadData()
         }
@@ -47,7 +47,9 @@ class QQMusicListController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        QQMusicOperationTool.sharedInstance.musicMs = models
+        QQMusicOperationTool.sharedInstance.playMusic(models[(indexPath as NSIndexPath).row])
+        performSegue(withIdentifier: "listToDetail", sender: nil)
         
     }
 

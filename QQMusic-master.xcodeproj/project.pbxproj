@@ -66,6 +66,10 @@
 		C701FF2A1F67B60B008C2AF3 /* QQMusicTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF291F67B60B008C2AF3 /* QQMusicTool.swift */; };
 		C701FF2D1F67C1D7008C2AF3 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF2C1F67C1D7008C2AF3 /* CALayer+Extension.swift */; };
 		C701FF2F1F67C416008C2AF3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF2E1F67C416008C2AF3 /* UIView+Extension.swift */; };
+		C701FF311F67D6DA008C2AF3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF301F67D6DA008C2AF3 /* DetailViewController.swift */; };
+		C701FF331F67E41F008C2AF3 /* QQMusicMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF321F67E41F008C2AF3 /* QQMusicMessageModel.swift */; };
+		C701FF351F67E7D8008C2AF3 /* LrcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF341F67E7D8008C2AF3 /* LrcViewController.swift */; };
+		C701FF371F67E998008C2AF3 /* LrcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701FF361F67E998008C2AF3 /* LrcLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +155,10 @@
 		C701FF291F67B60B008C2AF3 /* QQMusicTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQMusicTool.swift; sourceTree = "<group>"; };
 		C701FF2C1F67C1D7008C2AF3 /* CALayer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		C701FF2E1F67C416008C2AF3 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C701FF301F67D6DA008C2AF3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C701FF321F67E41F008C2AF3 /* QQMusicMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQMusicMessageModel.swift; sourceTree = "<group>"; };
+		C701FF341F67E7D8008C2AF3 /* LrcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LrcViewController.swift; sourceTree = "<group>"; };
+		C701FF361F67E998008C2AF3 /* LrcLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LrcLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +281,8 @@
 		C701FEB61F667096008C2AF3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C701FF301F67D6DA008C2AF3 /* DetailViewController.swift */,
+				C701FF341F67E7D8008C2AF3 /* LrcViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				C701FF211F66925F008C2AF3 /* QQLrcModel.swift */,
+				C701FF321F67E41F008C2AF3 /* QQMusicMessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +299,7 @@
 		C701FEB81F667096008C2AF3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C701FF361F67E998008C2AF3 /* LrcLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,13 +603,17 @@
 			files = (
 				C701FF2F1F67C416008C2AF3 /* UIView+Extension.swift in Sources */,
 				C701FEC21F66717F008C2AF3 /* QQMusicModel.swift in Sources */,
+				C701FF351F67E7D8008C2AF3 /* LrcViewController.swift in Sources */,
 				C701FEC01F6670B7008C2AF3 /* QQMusicListController.swift in Sources */,
+				C701FF311F67D6DA008C2AF3 /* DetailViewController.swift in Sources */,
 				C701FF241F6695B6008C2AF3 /* QQTimeTool.swift in Sources */,
 				C701FF2D1F67C1D7008C2AF3 /* CALayer+Extension.swift in Sources */,
 				C701FF2A1F67B60B008C2AF3 /* QQMusicTool.swift in Sources */,
 				C701FEBD1F667096008C2AF3 /* AppDelegate.swift in Sources */,
 				C701FF221F66925F008C2AF3 /* QQLrcModel.swift in Sources */,
+				C701FF371F67E998008C2AF3 /* LrcLabel.swift in Sources */,
 				C701FF1E1F668EE5008C2AF3 /* QQMusicDataManager.swift in Sources */,
+				C701FF331F67E41F008C2AF3 /* QQMusicMessageModel.swift in Sources */,
 				C701FEC51F6676DF008C2AF3 /* QQMusicCell.swift in Sources */,
 				C701FF281F67B5D8008C2AF3 /* QQMusicOperationTool.swift in Sources */,
 			);
