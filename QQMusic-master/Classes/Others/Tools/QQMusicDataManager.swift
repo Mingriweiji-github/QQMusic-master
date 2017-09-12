@@ -27,7 +27,7 @@ class QQMusicDataManager: NSObject {
         
         result(musics)
     }
-    func getLrcs(_ lrcName:String?) -> [QQLrcModel] {
+    class func getLrcs(_ lrcName:String?) -> [QQLrcModel] {
         if lrcName == nil {
             return [QQLrcModel]()
         }
@@ -59,12 +59,19 @@ class QQMusicDataManager: NSObject {
             lrcModelS.append(lrcModel)
         }
         for index in 0..<lrcModelS.count{
-            if index == lrcModelS.count - 1 {
-                break
-            }
+            if index == lrcModelS.count - 1 {break}
             lrcModelS[index].endTime = lrcModelS[index + 1].beginTime
         }
         return lrcModelS
+    }
+    
+   class func getCurrentLrcModel(_ currentTime:TimeInterval,lrcMs:[QQLrcModel]) -> (row:Int,lrcM:QQLrcModel?){
+        for i in 0..<lrcMs.count {
+            if currentTime > lrcMs[i].beginTime && currentTime < lrcMs[i].endTime {
+                return (i,lrcMs[i])
+            }
+        }
+        return (0,nil)
     }
     
     
