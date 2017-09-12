@@ -31,11 +31,14 @@ class QQMusicCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        selectionStyle = .none//取消选中
+        //设置圆角
+        headerImageV.layer.cornerRadius = 20
+        headerImageV.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     func animation(_ type:AnimationType){
