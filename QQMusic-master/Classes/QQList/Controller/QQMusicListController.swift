@@ -33,6 +33,8 @@ class QQMusicListController: UITableViewController {
         tableView.separatorStyle = .none
         let nib = UINib(nibName: String(describing:QQMusicCell.self), bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "musicCellID")
+        //隐藏下一级导航栏
+        navigationController?.isNavigationBarHidden = true
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

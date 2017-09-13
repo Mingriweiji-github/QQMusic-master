@@ -30,6 +30,7 @@
                     <constraint firstItem="7NH-kT-0df" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="gE8-UG-gRa"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="lrcLabel" destination="7NH-kT-0df" id="5Yl-Hv-wdn"/>
             </connections>

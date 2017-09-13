@@ -46,6 +46,7 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
         print("Tap")
         let value = sender.location(in: sender.view).x / (sender.view?.width)!
         progressSlider.value = Float(value)
+        
         let totalTime = QQMusicOperationTool.sharedInstance.getMusicMessageM().totalTime
         let costTime = totalTime * TimeInterval(value)
         QQMusicOperationTool.sharedInstance.jumpTo(costTime)
@@ -100,7 +101,6 @@ class DetailViewController: UIViewController,UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         lrcVC.tableView.backgroundColor = UIColor.clear
         lrcScrollView.addSubview(lrcVC.tableView)
         lrcScrollView.delegate = self

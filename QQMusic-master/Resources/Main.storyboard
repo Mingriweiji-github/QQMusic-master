@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="VOd-V6-rbI">
             <objects>
-                <navigationController id="MSq-19-F4L" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MSq-19-F4L" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="14u-q9-req">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -82,7 +82,7 @@
                                         <color key="textColor" red="1" green="0.46666666670000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sCa-9c-DdV">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="sCa-9c-DdV">
                                         <rect key="frame" x="98" y="64.5" width="179" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
@@ -130,7 +130,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="379"/>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="oOC-97-StV" firstAttribute="top" secondItem="z4T-rf-0RZ" secondAttribute="top" constant="55" id="5W6-7o-eaw"/>
                                     <constraint firstItem="mM3-o1-UB6" firstAttribute="top" secondItem="5bM-3V-mbN" secondAttribute="bottom" id="9A8-w4-Sri"/>
@@ -166,8 +166,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xH5-Fv-eBA">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xH5-Fv-eBA">
                                         <rect key="frame" x="63" y="0.0" width="249" height="31"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="q0S-ff-AX0"/>
                                         </constraints>
@@ -176,15 +177,17 @@
                                             <action selector="touchDown:" destination="Nlo-M9-UxM" eventType="touchDown" id="DBl-22-1Yw"/>
                                             <action selector="touchUp:" destination="Nlo-M9-UxM" eventType="touchUpInside" id="G7A-zz-JbA"/>
                                             <action selector="valueChanged" destination="Nlo-M9-UxM" eventType="valueChanged" id="AyG-oX-h9g"/>
+                                            <outletCollection property="gestureRecognizers" destination="AP9-wC-ze5" appends="YES" id="bFq-XR-6km"/>
                                         </connections>
                                     </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGX-Rn-VML">
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGX-Rn-VML">
                                         <rect key="frame" x="155.5" y="46" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="64" id="YJh-c3-Ygr"/>
                                             <constraint firstAttribute="height" constant="64" id="pwn-qw-QGy"/>
                                         </constraints>
                                         <state key="normal" image="player_btn_play_normal"/>
+                                        <state key="selected" image="player_btn_pause_normal"/>
                                         <connections>
                                             <action selector="playOrPauseAction:" destination="Nlo-M9-UxM" eventType="touchUpInside" id="Tor-xP-kdm"/>
                                         </connections>
@@ -262,9 +265,6 @@
                             <constraint firstItem="DiT-2V-7h3" firstAttribute="top" secondItem="FPF-uj-qUL" secondAttribute="bottom" id="tqu-pq-DfG"/>
                             <constraint firstItem="DiT-2V-7h3" firstAttribute="leading" secondItem="bPF-wr-6ZA" secondAttribute="leading" id="ufx-Z8-Eqa"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="AP9-wC-ze5" appends="YES" id="atc-ok-O4r"/>
-                        </connections>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -297,6 +297,7 @@
         <image name="jay.jpg" width="350" height="350"/>
         <image name="miniplayer_btn_playlist_close" width="40" height="40"/>
         <image name="player_btn_next_normal" width="64" height="64"/>
+        <image name="player_btn_pause_normal" width="64" height="64"/>
         <image name="player_btn_play_normal" width="64" height="64"/>
         <image name="player_btn_pre_normal" width="64" height="64"/>
     </resources>

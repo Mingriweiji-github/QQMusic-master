@@ -45,7 +45,7 @@ class QQMusicCell: UITableViewCell {
         if type == .rotation{
             self.layer.removeAnimation(forKey: ".rotation")
             let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-            animation.values = [M_PI,0]
+            animation.values = [Double.pi,0]
             animation.duration = 0.5
             animation.repeatCount = 1
             self.layer.add(animation, forKey: "rotation")
