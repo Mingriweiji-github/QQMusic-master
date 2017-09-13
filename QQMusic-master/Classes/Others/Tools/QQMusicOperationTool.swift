@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class QQMusicOperationTool: NSObject {
     //单例
     static let sharedInstance = QQMusicOperationTool()
     let tool = QQMusicTool()
     var musicMs:[QQMusicModel] = [QQMusicModel]()
+    
+    fileprivate var lastRow = -1
+    fileprivate var artWork: MPMediaItemArtwork?
     
     fileprivate var currentPlayIndex = -1{
         didSet{
@@ -27,7 +31,6 @@ class QQMusicOperationTool: NSObject {
     
     fileprivate var musicMessageM = QQMusicMessageModel()
     func getMusicMessageM()-> QQMusicMessageModel{
-    
         musicMessageM.musicM = musicMs[currentPlayIndex]
         musicMessageM.costTime = tool.player?.currentTime ?? 0
         musicMessageM.totalTime = tool.player?.duration ?? 0
@@ -75,5 +78,45 @@ class QQMusicOperationTool: NSObject {
     }
     
     //锁屏信息
+    func setupLockMessage() {
+        let messageM = getMusicMessageM()
+        let center = MPNowPlayingInfoCenter.default()
+        
+        let musicName = messageM.musicM?.name ?? ""
+        let singer = messageM.musicM?.singer ?? ""
+        let costTime = messageM.costTime
+        let totalTime = messageM.totalTime
+        
+        let lrcFileName = messageM.musicM?.filename
+        let lrcMs = QQMusicDataManager.getLrcs(lrcFileName)
+        let lrcCurrent = QQMusicDataManager.getCurrentLrcModel(messageM.costTime, lrcMs: lrcMs)
+        let lrcM = lrcCurrent.lrcM
+        
+        var resultImage:UIImage?
+        if lastRow != lrcCurrent.row {
+            lastRow = lrcCurrent.row
+            resultImage = QQImageTool.getNewImage(UIImage(named:messageM.musicM?.icon ?? ""), sourcStr: lrcM?.lrcContent)
+            if resultImage != nil{
+                //锁屏照片
+                artWork = MPMediaItemArtwork(image: resultImage!)
+            }
+        }
+        
+        let dict:NSMutableDictionary = [
+            MPMediaItemPropertyAlbumTitle:musicName,
+            MPMediaItemPropertyArtist:singer,
+            MPMediaItemPropertyPlaybackDuration:totalTime,
+            MPNowPlayingInfoPropertyElapsedPlaybackTime:costTime
+        ]
+        
+        if artWork != nil {
+            dict.setValue(artWork!, forKey: MPMediaItemPropertyArtwork)
+        }
+        let dicCopy = dict.copy()
+        center.nowPlayingInfo = dicCopy as? [String:Any]
+        //开启远程控制
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+    }
+    
     
 }

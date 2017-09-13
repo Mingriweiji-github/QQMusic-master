@@ -10,6 +10,7 @@ import UIKit
 
 class LrcLabel: UILabel {
 
+    //单行歌词进度
     var radio : CGFloat = 0.0{
     
         didSet{
@@ -22,6 +23,7 @@ class LrcLabel: UILabel {
         
         UIColor.green.set()
         
+        //进度
         UIRectFillUsingBlendMode(CGRect(x: rect.origin.x, y: rect.origin.y, width: rect.size.width * radio, height: rect.size.height), CGBlendMode.sourceIn)
     }
 }

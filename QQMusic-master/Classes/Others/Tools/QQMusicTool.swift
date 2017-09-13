@@ -15,8 +15,10 @@ class QQMusicTool: NSObject {
 
     var player:AVAudioPlayer?
     var volume:Float = 1
+    
     override init() {
         super.init()
+        //初始化是添加setCategory和setActive,Info.plist中添加
         let session = AVAudioSession.sharedInstance()
         do {
             try session.setCategory(AVAudioSessionCategoryPlayback)//后台播放

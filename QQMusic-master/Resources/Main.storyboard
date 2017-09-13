@@ -120,7 +120,7 @@
                                             <constraint firstAttribute="width" secondItem="oOC-97-StV" secondAttribute="height" multiplier="1:1" id="Vsb-X8-jLg"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM3-o1-UB6" userLabel="lrcLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM3-o1-UB6" userLabel="lrcLabel" customClass="LrcLabel" customModule="QQMusic_master" customModuleProvider="target">
                                         <rect key="frame" x="169.5" y="379" width="35.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -268,10 +268,11 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backImageV" destination="C9t-q7-q7g" id="Q37-bG-gdz"/>
                         <outlet property="costTimeLabel" destination="krN-n6-PGE" id="4fQ-Yl-61q"/>
+                        <outlet property="foreImageV" destination="oOC-97-StV" id="Rlg-dE-PLg"/>
                         <outlet property="lrcLabel" destination="mM3-o1-UB6" id="hil-KU-6SZ"/>
                         <outlet property="lrcScrollView" destination="5bM-3V-mbN" id="gQk-pk-7Fj"/>
-                        <outlet property="palyOrpauseBtn" destination="BGX-Rn-VML" id="4Li-q8-quB"/>
                         <outlet property="playOrpauseBtn" destination="BGX-Rn-VML" id="6fX-XS-rEW"/>
                         <outlet property="progressSlider" destination="xH5-Fv-eBA" id="q2n-LU-wxY"/>
                         <outlet property="singerLabel" destination="5L5-oZ-qIB" id="bbg-tm-OIb"/>
